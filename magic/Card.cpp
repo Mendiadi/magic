@@ -116,7 +116,7 @@ void Card::texture_make(const std::string& path)
 
 }
 
-const sf::Sprite& Card::display() const
+sf::Sprite& Card::display() 
 {
 	return sprite;
 }

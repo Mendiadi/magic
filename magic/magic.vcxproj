@@ -138,12 +138,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Application.cpp" />
     <ClCompile Include="Card.cpp" />
     <ClCompile Include="DeckOfCards.cpp" />
     <ClCompile Include="Magic.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Application.h" />
     <ClInclude Include="Card.h" />
     <ClInclude Include="DeckOfCards.h" />
     <ClInclude Include="Magic.h" />

@@ -45,7 +45,7 @@ public:
 	Card(CardSuit suit, CardName name);
 
 	void texture_make(const std::string& path);
-	const sf::Sprite& display() const;
+	sf::Sprite& display();
 	void set_pos(const sf::Vector2f&);
 };
 

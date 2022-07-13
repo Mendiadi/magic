@@ -26,34 +26,41 @@ std::vector<Card*>& Magic::get_merged()
 	return merged;
 }
 
-void Magic::draw_all(sf::RenderWindow& win)
+void Magic::draw_all()
 {
-	win.clear(sf::Color::Black);
-	for (size_t i = 0; i < SIZE; i++)
+	int pos_draw = 0;
+	for (auto& i : merged)
 	{
-		win.draw(merged[i]->display());
+		i->set_pos(sf::Vector2f(50 + pos_draw, 100));
+		pos_draw += 125;
+
 	}
-	win.display();
+	
+	
 }
 
-void Magic::draw_half_one(sf::RenderWindow& win)
+void Magic::draw_half_one()
 {
-	win.clear(sf::Color::Black);
-	for (size_t i = 0; i < SIZE / 2; i++)
+	int pos_draw = 0;
+	for (auto& i : half_one)
 	{
-		win.draw(half_one[i]->display());
+		i->set_pos(sf::Vector2f(150 + pos_draw, 100));
+		pos_draw += 125;
+
 	}
-	win.display();
+
+	
 }
 
-void Magic::draw_half_two(sf::RenderWindow& win)
+void Magic::draw_half_two()
 {
-	win.clear(sf::Color::Black);
-	for (size_t i = 0; i < SIZE / 2; i++)
+	int pos_draw = 0;
+	for (auto& i : half_two)
 	{
-		win.draw(half_two[i]->display());
+		i->set_pos(sf::Vector2f(150 + pos_draw, 100));
+		pos_draw += 125;
+
 	}
-	win.display();
 }
 
 

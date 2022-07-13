@@ -21,9 +21,9 @@ public:
 	std::vector<Card*>& get_half_one();
 	std::vector<Card*>& get_half_two();
 	std::vector<Card*>& get_merged();
-	void draw_all(sf::RenderWindow& win);
-	void draw_half_one(sf::RenderWindow& win);
-	void draw_half_two(sf::RenderWindow& win);
+	void draw_all();
+	void draw_half_one();
+	void draw_half_two();
 	void seperate();
 	void merge(bool isHalfOne);
 	Card& find();
