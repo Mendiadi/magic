@@ -14,5 +14,5 @@
 #### will give wrong value and the magic will crash
 #### more coming soon still in dev and code still not stabled but works fine for alpha 
 # Pictures
-![image](https://im.ge/i/uetFfX)
-![image](https://im.ge/i/uetuN9)
+![image](https://i.im.ge/2022/07/14/uetFfX.png)
+![image](https://i.im.ge/2022/07/14/uetuN9.png)
