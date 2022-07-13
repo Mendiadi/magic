@@ -68,9 +68,6 @@ std::vector<Card*> DeckOfCards::grab(size_t amount = 1)
 	if (amount > DECK_SIZE)
 		exit(1);
 
-	for (size_t i = 0; i < amount; i++)
-	{
-		cards.resize(8);
-	}
+	cards.resize(amount);
 	return cards;
 }
