@@ -13,3 +13,6 @@
 #### warning : you must answear right otherwise program output
 #### will give wrong value and the magic will crash
 #### more coming soon still in dev and code still not stabled but works fine for alpha 
+# Pictures
+![script](https://drive.google.com/file/d/1EHnm-2tToWkZ0mTMxr4uGQzx8LtGg1fi/view?usp=sharing)
+![script](https://drive.google.com/file/d/1F0yha9ugKuh-G5omH5RNXfb9NxlGHXbd/view?usp=sharing)
