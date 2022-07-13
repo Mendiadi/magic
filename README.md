@@ -14,5 +14,5 @@
 #### will give wrong value and the magic will crash
 #### more coming soon still in dev and code still not stabled but works fine for alpha 
 # Pictures
-![image](D:\ShadowPlay\Desktop\dd)
-![image](D:\ShadowPlay\Desktop\ddd)
+![image](https://im.ge/i/uetFfX)
+![image](https://im.ge/i/uetuN9)
