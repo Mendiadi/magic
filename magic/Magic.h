@@ -21,11 +21,11 @@ public:
 	std::vector<Card*>& get_half_one();
 	std::vector<Card*>& get_half_two();
 	std::vector<Card*>& get_merged();
-	void draw_all();
-	void draw_half_one();
-	void draw_half_two();
+	void draw(std::vector<Card*>&);
+	
 	void seperate();
-	void merge(bool isHalfOne);
+	void merge(std::vector<Card*>& first, std::vector<Card*>& second);
+	void shuffle();
 	Card& find();
 	~Magic();
 };

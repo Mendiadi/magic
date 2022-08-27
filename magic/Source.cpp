@@ -12,8 +12,10 @@
 
 int main()
 {
+
 	Magic* magic = new Magic;
 	sf::RenderWindow* window = new sf::RenderWindow(sf::VideoMode(1100,700), "Magic");
+	
 	Application::run(*window,*magic);
 	delete magic; delete window;
 

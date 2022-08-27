@@ -11,6 +11,8 @@ Magic::Magic()
 	}
 }
 
+
+
 std::vector<Card*>& Magic::get_half_one()
 {
 	return half_one;
@@ -26,10 +28,10 @@ std::vector<Card*>& Magic::get_merged()
 	return merged;
 }
 
-void Magic::draw_all()
+void Magic::draw(std::vector<Card*>& vec)
 {
 	int pos_draw = 0;
-	for (auto& i : merged)
+	for (auto& i : vec)
 	{
 		i->set_pos(sf::Vector2f(50 + pos_draw, 100));
 		pos_draw += 125;
@@ -39,35 +41,12 @@ void Magic::draw_all()
 	
 }
 
-void Magic::draw_half_one()
-{
-	int pos_draw = 0;
-	for (auto& i : half_one)
-	{
-		i->set_pos(sf::Vector2f(150 + pos_draw, 100));
-		pos_draw += 125;
-
-	}
-
-	
-}
-
-void Magic::draw_half_two()
-{
-	int pos_draw = 0;
-	for (auto& i : half_two)
-	{
-		i->set_pos(sf::Vector2f(150 + pos_draw, 100));
-		pos_draw += 125;
-
-	}
-}
-
 
 
 void Magic::seperate()
 {
 	bool helper = 1;
+	
 	for (size_t i = 0; i < SIZE; i++)
 	{
 		if (helper)
@@ -90,34 +69,33 @@ void Magic::seperate()
 
 }
 
-void Magic::merge(bool isHalfOne)
+void Magic::shuffle()
 {
-	if (isHalfOne)
+	this->cards.clear();
+	merged.clear();
+	cards = deck.grab(SIZE);
+	for (size_t i = 0; i < SIZE; i++)
 	{
-		if (!half_two.empty())
-		{
-			std::vector<Card*> temp(half_one);
-			std::move(half_two.begin(), half_two.end(), std::back_inserter(temp));
-			merged = temp;
-			half_one.clear();
-			half_two.clear();
-		}
-		else
-			exit(1);
+		merged.push_back(cards[i]);
+	}
+}
+
+void Magic::merge(std::vector<Card*>& first, std::vector<Card*>& second)
+{
+
+
+	if (!first.empty())
+	{
+		std::vector<Card*> temp(first);
+		std::move(second.begin(), second.end(), std::back_inserter(temp));
+		merged = temp;
+		first.clear();
+		second.clear();
 	}
 	else
-	{
-		if (!half_one.empty())
-		{
-			std::vector<Card*> temp(half_two);
-			std::move(half_one.begin(), half_one.end(), std::back_inserter(temp));
-			merged = temp;
-			half_one.clear();
-			half_two.clear();
-		}
-		else
-			exit(1);
-	}
+		exit(1);
+
+	
 }
 
 Card& Magic::find()
@@ -130,9 +108,6 @@ Card& Magic::find()
 
 Magic::~Magic()
 {
+	
 
-	for (auto& i : cards)
-	{
-		delete i;
-	}
 }

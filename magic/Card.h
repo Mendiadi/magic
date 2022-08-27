@@ -47,6 +47,7 @@ public:
 	void texture_make(const std::string& path);
 	sf::Sprite& display();
 	void set_pos(const sf::Vector2f&);
+	~Card();
 };
 
 

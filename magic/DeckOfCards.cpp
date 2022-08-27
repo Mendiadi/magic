@@ -57,9 +57,12 @@ inline void DeckOfCards::print() const
 
 DeckOfCards::~DeckOfCards()
 {
-	for (size_t i = 0; i < DECK_SIZE; i++)
-	{
-		delete cards[i];
+	if (cards.size() == DECK_SIZE) {
+		for (size_t i = 0; i < DECK_SIZE; i++)
+		{
+			if (cards[i] != nullptr)
+				delete cards[i];
+		}
 	}
 }
 

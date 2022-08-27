@@ -125,3 +125,7 @@ void Card::set_pos(const sf::Vector2f& pos)
 {
 	sprite.setPosition(pos);
 }
+
+Card::~Card() {
+	
+}

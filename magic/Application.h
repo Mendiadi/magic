@@ -23,16 +23,13 @@ public:
 
 	static void eventProcess(
 		sf::RenderWindow& window,
-		State& state,
 		sf::Event& ev,
-		std::vector<sf::Drawable*>& objets,
 		Magic& magic,
-		sf::Text& text,
-		sf::Font& font,
 		int& update,
-		int& count
+		int& count,
+		bool& once
 	);
-
+	~Application();
 };
 
 
