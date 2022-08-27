@@ -14,5 +14,5 @@
 #### will give wrong value and the magic will crash
 #### more coming soon still in dev and code still not stabled but works fine for alpha 
 # Pictures
-![image](https://i.im.ge/2022/07/14/uetFfX.png)
-![image](https://i.im.ge/2022/07/14/uetuN9.png)
+![image](https://github.com/Mendiadi/magic/blob/master/magic/assets/screenshot.PNG?raw=true)
+
