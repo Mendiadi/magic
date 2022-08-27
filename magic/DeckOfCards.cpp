@@ -66,7 +66,7 @@ DeckOfCards::~DeckOfCards()
 	}
 }
 
-std::vector<Card*> DeckOfCards::grab(size_t amount = 1)
+std::vector<Card*> DeckOfCards::grab(const size_t amount = 1)
 {
 	if (amount > DECK_SIZE)
 		exit(1);

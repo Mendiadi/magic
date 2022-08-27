@@ -14,7 +14,7 @@ public:
 	DeckOfCards();
 	void sort();
 	void shuffle();
-	std::vector<Card*> grab(size_t amount);
+	std::vector<Card*> grab(const size_t amount);
 	void print() const;
 	~DeckOfCards();
 };

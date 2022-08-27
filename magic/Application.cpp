@@ -3,7 +3,7 @@
 
 
 
-void Application::draw(sf::RenderWindow& win, std::vector<sf::Drawable*>& objects)
+void Application::draw(sf::RenderWindow& win, std::vector<sf::Drawable* >& objects) 
 {
 	win.clear(sf::Color::Green);
 	
@@ -23,16 +23,16 @@ Application::~Application()
 
 void Application::run(sf::RenderWindow& window,Magic& magic)
 {
-	bool once = 1;
+	static bool once = 1;
 	static int count = 0;
-	int updater = 0;
-	std::vector<sf::Drawable*> to_draw;
+	static int updater = 0;
+	static std::vector<sf::Drawable* > to_draw;
 	sf::Font font;
 	sf::Text text;
 	State state = State::initStep;
 	while (window.isOpen())
 	{
-		sf::Event events;
+		static sf::Event events;
 		if (updater == 0 && once)
 		{
 			if (!font.loadFromFile("arial.ttf"))
@@ -83,7 +83,7 @@ void Application::run(sf::RenderWindow& window,Magic& magic)
 }
 
 
-void Application::eventProcess(sf::RenderWindow& window,sf::Event& ev,Magic& magic,int& update,int& count,bool& once)
+inline void Application::eventProcess(sf::RenderWindow& window,sf::Event& ev,Magic& magic,int& update,int& count,bool& once)
 {
 
 	while (window.pollEvent(ev))

@@ -18,7 +18,7 @@ class Application
 	
 public:
 
-	static void draw(sf::RenderWindow& win, std::vector<sf::Drawable*>&);
+	static void draw( sf::RenderWindow& win, std::vector<sf::Drawable* >&)  ;
 	static void run(sf::RenderWindow& window,Magic& magic);
 
 	static void eventProcess(

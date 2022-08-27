@@ -13,17 +13,17 @@ Magic::Magic()
 
 
 
-std::vector<Card*>& Magic::get_half_one()
+std::vector<Card*>& Magic::get_half_one() 
 {
 	return half_one;
 }
 
-std::vector<Card*>& Magic::get_half_two()
+std::vector<Card*>& Magic::get_half_two() 
 {
 	return half_two;
 }
 
-std::vector<Card*>& Magic::get_merged()
+std::vector<Card*>& Magic::get_merged() 
 {
 	return merged;
 }
@@ -98,7 +98,7 @@ void Magic::merge(std::vector<Card*>& first, std::vector<Card*>& second)
 	
 }
 
-Card& Magic::find()
+Card& Magic::find() const
 {
 	if (merged.empty())
 		exit(1);
